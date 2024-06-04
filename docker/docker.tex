@@ -1,0 +1,87 @@
+\documentclass[a4paper,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+\setlength{\columnsep}{1cm}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\begin{document}
+
+\begin{center}
+    \LARGE\textbf{Docker Cheatsheet}
+\end{center}
+
+\begin{multicols}{3}
+
+\section*{Docker Concepts}
+\begin{itemize}
+    \item \textbf{docker}: Creates, deploys and manages containers on different operating environmens (win/mac/linux/kubernetes)
+    \item \textbf{image}: A filesystem containing the application docker will run.
+    \item \textbf{layer}: The image storage format is composed of read-only file system layers; the container creates writable layers.
+    \item \textbf{container}: Isolated environment within a kernel for an application to run. Has it's own root fs, networking, ...
+    \item \textbf{Dockerfile}: A file detailing the steps to build a Docker image.
+    \item \textbf{docker engine}: Docker installation running on a given host that can run containers, build images, ...
+    \item \textbf{docker client}: A client that talks to local or remote Docker daemon which is used to manage containers, images, ...
+    \item \textbf{docker daemon}: Background service managing images and containers.
+    \item \textbf{docker registry}: Stores versioned docker images, associated with a tag, a string used to mark versions or variants of an image.
+    \item \textbf{volume}: Directory shared between container and host.
+\end{itemize}
+
+\columnbreak
+
+\section*{Docker cli}
+\begin{verbatim}
+docker run [OPTIONS] IMAGE[:TAG] [COMMAND]
+\end{verbatim}
+
+\begin{itemize}
+    \item \texttt{--name=CONTAINER\_NAME}: Assign name to container.
+    \item \texttt{--label NAME=VALUE}: Set metadata on container.
+    \item \texttt{-d}, \texttt{--detach}: Run in the background.
+    \item \texttt{-i}, \texttt{--interactive}: Interactive.
+    \item \texttt{-t}, \texttt{--tty}: Allocate a pseudo-TTY.
+    \item \texttt{--rm}: Automatically remove container when entrypoint process exits in the container.
+    \item \texttt{-u}, \texttt{--user=[user[:group]]}: Run as specified user/uid, and group/gid.
+    \item \texttt{--privileged}: Allow access to all host devices.
+    \item \texttt{-v}, \texttt{--volume}: Bind mount a volume from the host.
+    \item \texttt{--volume-from}: Mount volumes from another container.
+    \item \texttt{-e}, \texttt{--env}: Set environment variables.
+    \item \texttt{--env-file}: Read environment variables from a file.
+    \item \texttt{-p}, \texttt{--publish [host\_port]:[container\_port]}: Publish container's ports to the host.
+    \item \texttt{--expose}: Expose a port or a range of ports.
+    \item \texttt{-h}, \texttt{--hostname}: Set container's hostname.
+    \item \texttt{--network}: Connect container to a network.
+    \item \texttt{--add-host}: Add a custom host-to-IP mapping.
+    \item \texttt{--read-only}: Mount root read-only.
+\end{itemize}
+
+\section*{Dockerfile Instructions}
+\textbf{Instructions:}
+\begin{itemize}
+    \item \textbf{FROM}: Set the base image to build from.
+    \item \textbf{RUN}: Execute a command in the shell or exec form.
+    \item \textbf{MAINTAINER}: Set the author field.
+    \item \textbf{LABEL}: Add metadata.
+    \item \textbf{ARG}: Define build-time variables.
+    \item \textbf{ENV}: Set environment variables.
+    \item \textbf{COPY}: Copy files + directories from host to image.
+    \item \textbf{ADD}: Copy files from source (can be remote or archive) and add them to the image. \textit{discouraged}
+    \item \textbf{VOLUME}: specify mount point for a volume.
+    \item \textbf{EXPOSE}: Expose a port or ports.
+    \item \textbf{WORKDIR}: Set the working directory for any \texttt{RUN}, \texttt{CMD}, \texttt{ENTRYPOINT}, \texttt{COPY}, and \texttt{ADD} instructions that follow it.
+    \item \textbf{USER}: Set the user name or UID to use when running the image.
+    \item \textbf{CMD}: Provide defaults for an executing container.
+    \item \textbf{ENTRYPOINT}: Configure a container that will run as an executable.
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
+
