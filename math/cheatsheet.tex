@@ -60,7 +60,8 @@ a^2 - b^2 &= (a + b)(a - b) \\
 \end{align*}
 
 \subsubsection*{7. Trigonometry}
-\begin{tikzpicture}[scale=0.5, overlay, shift={(14cm,0)}]
+SOHCAHTOA
+\begin{tikzpicture}[scale=0.5, overlay, shift={(10cm,0)}]
   % Draw the unit circle
   \draw (0,0) coordinate (O) circle [radius=3cm];
 
@@ -136,5 +137,109 @@ a^2 - b^2 &= (a + b)(a - b) \\
 \frac{d}{dx}(\ln x) &= \frac{1}{x}
 \end{align*}
 \end{multicols}
+
+\subsubsection*{11. Area Circumference etc.}
+
+Triangle \\
+\begin{minipage}{0.5\linewidth}
+    \begin{itemize}
+        \item Base: $b$, Height: $h$
+        \item Perimeter: $P = a + b + c$
+        \item Area: $A = \frac{1}{2} b h$
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0) -- (3,0) -- (1.5,2) -- cycle;
+        \draw (1.5, 0) -- (1.5, 2);
+        \node[below] at (1,0) {$b$};
+        \node[left] at (1.5,1) {$h$};
+    \end{tikzpicture}
+\end{minipage}
+
+Square \\
+\begin{minipage}{0.4\linewidth}
+	\begin{itemize}
+	    \item Side length: $s$
+	    \item Perimeter: $P = 4s$
+	    \item Area: $A = s^2$
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \node[above] at (1,2) {$s$};
+        \node[right] at (2,1) {$s$};
+    \end{tikzpicture}
+\end{minipage}
+
+Rectangle \\
+\begin{minipage}{0.4\linewidth}
+	\begin{itemize}
+	    \item Width: $w$, Height: $h$
+	    \item Perimeter: $P = 2(w + h)$
+	    \item Area: $A = wh$
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (3,2);
+        \node[above] at (1.5,2) {$w$};
+        \node[right] at (3,1) {$h$};
+    \end{tikzpicture}
+\end{minipage}
+
+
+Parallelogram \\
+\begin{minipage}{0.4\linewidth}
+    \begin{itemize}
+        \item Base: $b$, Height: $h$
+        \item Perimeter: $P = 2(a + b)$
+        \item Area: $A = b h$
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0) -- (3,0) -- (4,2) -- (1,2) -- cycle;
+        \draw (1,0) -- (1,2);
+        \node[below] at (1.5,0) {$b$};
+        \node[left] at (1.5,1) {$h$};
+    \end{tikzpicture}
+\end{minipage}
+
+Trapezoid \\
+\begin{minipage}{0.4\linewidth}
+    \begin{itemize}
+        \item Bases: $b_1, b_2$, Height: $h$
+        \item Perimeter: $P = a + b_1 + b_2 + c$
+        \item Area: $A = \frac{1}{2} (b_1 + b_2) h$
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0) -- (4,0) -- (3.5,2) -- (0.5,2) -- cycle;
+        \draw (0.5,0) -- (0.5,2);
+        \node[below] at (2,0) {$b$};
+        \node[left] at (1,1) {$h$};
+    \end{tikzpicture}
+\end{minipage}
+
+
+Circle \\
+\begin{minipage}{0.4\linewidth}
+	\begin{itemize}
+	    \item Radius: $r$
+	    \item Circumference: $C = 2\pi r$
+	    \item Area: $A = \pi r^2$
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{tikzpicture}
+        \draw (0,0) circle (1.5);
+        \draw[->] (0,0) -- (1.5,0);
+        \node[above] at (0.75,0) {$r$};
+    \end{tikzpicture}
+\end{minipage}
+
 
 \end{document}
