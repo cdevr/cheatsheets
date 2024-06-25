@@ -159,7 +159,7 @@ Triangle \\
     \end{tikzpicture}
 \end{minipage}
 
-Square \\
+\noindent Square \\
 \begin{minipage}{0.4\linewidth}
 	\begin{itemize}
 	    \item Side length: $s$
@@ -175,8 +175,8 @@ Square \\
     \end{tikzpicture}
 \end{minipage}
 
-Rectangle \\
-\begin{minipage}{0.4\linewidth}
+\noindent Rectangle \\
+\begin{minipage}{0.5\linewidth}
 	\begin{itemize}
 	    \item Width: $w$, Height: $h$
 	    \item Perimeter: $P = 2(w + h)$
@@ -192,7 +192,7 @@ Rectangle \\
 \end{minipage}
 
 
-Parallelogram \\
+\noindent Parallelogram \\
 \begin{minipage}{0.4\linewidth}
     \begin{itemize}
         \item Base: $b$, Height: $h$
@@ -209,8 +209,8 @@ Parallelogram \\
     \end{tikzpicture}
 \end{minipage}
 
-Trapezoid \\
-\begin{minipage}{0.4\linewidth}
+\noindent Trapezoid \\
+\begin{minipage}{0.5\linewidth}
     \begin{itemize}
         \item Bases: $b_1, b_2$, Height: $h$
         \item Perimeter: $P = a + b_1 + b_2 + c$
@@ -219,16 +219,16 @@ Trapezoid \\
 \end{minipage}
 \begin{minipage}{0.4\linewidth}
     \begin{tikzpicture}
-        \draw (0,0) -- (4,0) -- (3.5,2) -- (0.5,2) -- cycle;
+        \draw (0,0) -- (4,0) -- (2.5,2) -- (0.5,2) -- cycle;
         \draw (0.5,0) -- (0.5,2);
-        \node[below] at (2,0) {$b$};
+        \node[above] at (2,2) {$b1$};
+        \node[below] at (2,0) {$b2$};
         \node[left] at (1,1) {$h$};
     \end{tikzpicture}
 \end{minipage}
 
-
-Circle \\
-\begin{minipage}{0.4\linewidth}
+\noindent Circle \\
+\begin{minipage}{0.5\linewidth}
 	\begin{itemize}
 	    \item Radius: $r$
 	    \item Circumference: $C = 2\pi r$
@@ -242,6 +242,5 @@ Circle \\
         \node[above] at (0.75,0) {$r$};
     \end{tikzpicture}
 \end{minipage}
-
 
 \end{document}
